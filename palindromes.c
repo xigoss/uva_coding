@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-#include <stdlib.h>
 
 #define NONE -1
 #define PALIN 0
@@ -27,7 +26,7 @@ int fun(char* str){
 	MA;
 	p = str;
 	q = str + len - 1;
-	while(p < q){
+	while(p <= q){
 		if(*p != *q){
 			flag_p = 0;
 		}
@@ -54,7 +53,7 @@ int fun(char* str){
 }
 
 
-void main(){
+int main(){
 	char s[256];
 	int flag;
 	while(scanf("%s", s) != EOF){
@@ -71,6 +70,7 @@ void main(){
 		if(flag == MIRRORPALIN){
 			printf("%s -- is a mirrored palindrome.\n", s);
 		}
+		printf("\n");
 	}
-	printf("\n");
+	return 0;
 }
